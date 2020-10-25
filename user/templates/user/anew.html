@@ -1,0 +1,14 @@
+{% extends 'user/base.html' %}
+
+{% block header %}
+
+<h4> era는 근현대, 조선시대, 삼국시대, 선사시대 중 하나로 </h4>
+<form method = 'POST'>
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="제출하기">
+</form>
+
+{% endblock %}
